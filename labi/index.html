@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html ng-app="app">
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<link rel="stylesheet" type="text/css" href="css/index.css"/>
+		<link rel="stylesheet" type="text/css" href="css/swiper.min.css"/>
+		<link rel="stylesheet" type="text/css" href="font/iconfont.css"/>
+		<script src="js/angular.js" type="text/javascript" charset="utf-8"></script>
+		<script src="js/angular-ui-route.js" type="text/javascript" charset="utf-8"></script>
+		<script src="js/swiper.min.js" type="text/javascript" charset="utf-8"></script>
+		<script src="js/zepto.js" type="text/javascript" charset="utf-8"></script>
+		<script src="js/index.js" type="text/javascript" charset="utf-8"></script>
+	</head>
+	<body ng-controller="mycon">
+		<header></header>
+		<main>
+			<div ui-view></div>
+		</main>
+		<footer>
+			<a ui-sref='shouye' ng-click="a(0)" class="{{color[0]}}">
+				<div class="iconfont icon-shouye-shouye {{color[0]}}"></div>
+				首页
+			</a>
+			<a ui-sref='zhangdan' ng-click="a(1)" class="{{color[1]}}">
+				<div class="iconfont icon-dingdan {{color[1]}}"></div>
+				账单
+			</a>
+			<a ui-sref='kefu'>
+				<div class="iconfont icon-zaixiankefu"></div>
+				客服
+			</a>
+			<a ui-sref='wode' ng-click="a(2)" class="{{color[2]}}">
+				<div class="iconfont icon-wode {{color[2]}}"></div>
+				我的
+			</a>
+		</footer>
+		<div class="huanying" ng-show="huanying==true" style="z-index: 100;"><img src="img/1.png"/></div>
+	</body>
+</html>
